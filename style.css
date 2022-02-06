@@ -35,10 +35,15 @@ html {
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-size: 1rem;
     background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
+}
+
+main {
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -50,12 +55,14 @@ body {
     background-color: white;
     width: 85%;
     max-width: 920px;
-    /* height: 535px; */
+    min-height: 480px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     position: relative;
+    border-radius: 2em;
+    box-shadow: 0 1.875rem 2.5rem rgb(29 30 53 / 40%);
 }
 
 .sub-container {
@@ -67,20 +74,76 @@ body {
 .image {
     width: 80%;
     margin: 0 auto;
+    margin-top: -100px;
 }
 
-/* .mobile-woman {
-
-} */
+.image::after {
+    content: url(/images/bg-pattern-mobile.svg);
+    position: absolute;
+    top: 0;
+}
 
 .faq {
-    margin: 50px 0;
+    margin-top: 60px ;
 }
+
+.sub-faq {
+    padding-top: 20px;
+}
+
+.last-hr {
+    margin-bottom: 30px;
+} 
 
 h1 {
     text-align: center;
     font-size: 3.0rem;
+    margin-bottom: 20px;
 }
+
+.accordion {
+  background-color: inherit;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  color: var(--Dark-grayish-blue);
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+    color: var(--soft-red);
+}
+
+.active.accordion{
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 600;
+}
+
+.accordion::after {
+    content: url(/images/icon-arrow-down.svg);
+    float: right;
+}
+
+.active::after {
+    transform: rotate(180deg);
+}
+
+.panel {
+  /* padding: 0 18px; */
+  color: var(--Dark-grayish-blue);
+  font-weight: 400;
+  width: 95%;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
 
 ul {
   margin: 20px 0 ;
@@ -99,5 +162,8 @@ li {
 }
 
 hr {
-    margin: 20px 0;
+    margin: 5px 0;
+    background-color: var(--Light-grayish-blue);
+    border: none;
+height: 1px;
 }

@@ -25,58 +25,65 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="sub-container">
+  <main>
 
-      <div class="image">
-        <img src="/images/illustration-woman-online-mobile.svg" class="mobile-woman" alt="Moblie">
-      </div>
+    <div class="container">
+      <div class="sub-container">
 
-      <div class="faq">
-        <h1>FAQ</h1>
-        <div class="sub-faq">
+        <div class="image">
+          <img src="/images/illustration-woman-online-mobile.svg" class="mobile-woman" alt="Moblie">
+          <!-- <img src="/images/bg-pattern-mobile.svg" alt=""> -->
+        </div>
 
+        <div class="faq">
+          <h1>FAQ</h1>
+          <div class="sub-faq">
 
-          <ul>
-            How many team members can I invite?<img src="/images/icon-arrow-down.svg" class="Arrow" alt="Arrow">
-            <li>You can invite up to 2 additional users on the Free plan. There is no limit on
-              team members for the Premium plan.</li>
+            <button class="accordion">How many team members can I invite?</button>
+            <div class="panel">
+              <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.</p>
+            </div>
             <hr>
-          </ul>
 
-          <ul>
-            What is the maximum file upload size?<img src="/images/icon-arrow-down.svg" class="Arrow" alt="Arrow">
-            <li>No more than 2GB. All files in your account must fit your allotted storage space.</li>
+            <button class="accordion">What is the maximum file upload size?</button>
+            <div class="panel">
+              <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            </div>
             <hr>
-          </ul>
 
-          <ul>
-            How do I reset my password?<img src="/images/icon-arrow-down.svg" class="Arrow" alt="Arrow">
-            <li>Click “Forgot password” from the login page or “Change password” from your profile page.
-              A reset link will be emailed to you.</li>
+            <button class="accordion">How do I reset my password?</button>
+            <div class="panel">
+              <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.</p>
+            </div>
             <hr>
-          </ul>
 
-          <ul>
-            Can I cancel my subscription?<img src="/images/icon-arrow-down.svg" class="Arrow" alt="Arrow">
-            <li>Yes! Send us a message and we’ll process your request no questions asked.</li>
+            <button class="accordion">Can I cancel my subscription?</button>
+            <div class="panel">
+              <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+            </div>
             <hr>
-          </ul>
 
-          <ul>
-            Do you provide additional support?<img src="/images/icon-arrow-down.svg" class="Arrow" alt="Arrow">
-            <li>Chat and email support is available 24/7. Phone lines are open during normal business hours.</li>
-            <hr>
-          </ul>
+            <button class="accordion">Do you provide additional support?</button>
+            <div class="panel">
+              <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+            </div>
+            <hr class="last-hr">
+           
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
