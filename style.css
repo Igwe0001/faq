@@ -35,6 +35,7 @@ html {
 
 body {
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     font-size: 1rem;
     background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
@@ -77,11 +78,11 @@ main {
     margin-top: -100px;
 }
 
-.image::after {
+/* .image::after {
     content: url(/images/bg-pattern-mobile.svg);
     position: absolute;
     top: 0;
-}
+} */
 
 .faq {
     margin-top: 60px ;
