@@ -95,10 +95,23 @@ main {
     margin: 0 auto;
 }
 
+.accordion {
+    color: var(--Dark-grayish-blue);
+}
+
+.accordion__label:hover {
+    color: var(--soft-red);
+}
+
+
 .second-container h1 {
     text-align: center;
     padding: 20px 0;
 }
+
+/* .accordion__label:hover {
+    color: var(--Light-grayish-blue);
+} */
 
 .section {
     background: white;
@@ -113,6 +126,8 @@ label {
     position: relative;
 }
 
+
+
 label::after {
     content: url(/images/icon-arrow-down.svg);
     position: absolute;
@@ -126,7 +141,7 @@ label::after {
     overflow: hidden;
     padding: 0 20px;
     max-height: 0;
-     transition: all .5s ease;
+    transition: all .5s ease;
 }
 
 .accordion__content *{
@@ -151,4 +166,17 @@ input:checked + label + .accordion__content *{
 
 input:checked + label::after {
     transform: rotate(180deg);
+   
+}
+
+input:checked + label {
+     color: var(--Dark-grayish-blue);
+}
+
+/* input:hover + label {
+    color: var(--soft-red);
+} */
+
+.accordion__label:hover {
+    color: var(--soft-red);
 }
