@@ -33,150 +33,155 @@ html {
     font-size: 12px;
 }
 
-
 body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    display: grid;
+    place-items: center;
     background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
     background-repeat: no-repeat;
     background-size: cover;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: scroll; 
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
+
 main {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
+    width: 90%;
+    max-width: 930px;
+    height: 80%;
+    max-height: 540px;
+    background-color: white;
     display: grid;
     place-items: center;
+    position: relative;
+    margin-top: 80px;
+    border-radius: 25px;
 }
 
 .container {
-    background-color: white;
     width: 90%;
-    max-width: 920px;
-    min-height: 520px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
+    height: 90%;
     position: relative;
-    border-radius: 2em;
-    margin-top: 100px;
-    box-shadow: 0 1.875rem 2.5rem rgb(29 30 53 / 40%);
 }
 
-.first-container {
+.image-container {
+    height: 25%;
+}
+
+.image-container .mobile-image {
     display: grid;
     place-items: center;
-    height: 30%;
-    position: relative;
-    min-height: 120px;
-    /* margin-top: -20px; */
-}
-
-.first-container img {
-    max-width: 250px;
-    margin-top: -160px;
+    width: 250px;
+    margin: 0 auto;
+    /* margin-top: -130px ; */
     position: absolute;
-    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -142px;
 }
 
-.first-container img::after {
+.image-container::before{
+    content: url(/images/illustration-woman-online-mobile.svg);
+    width: 250px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -140px;
+}
+
+ /* .image-container::content {
+     content: url(/images/illustration-woman-online-mobile.svg);
+ } */
+
+ .image-container::after {
     content: url(/images/bg-pattern-mobile.svg);
     position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -28px;
+    display: grid;
+    place-items: center;
 }
 
-.second-container {
-    width: 80%;
-    margin: 0 auto;
+    
+
+
+.mobile-shadow {
+   position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -25px;
 }
 
-.accordion {
-    color: var(--Dark-grayish-blue);
-}
-
-.accordion__label:hover {
-    color: var(--soft-red);
-}
-
-
-.second-container h1 {
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* .accordion__label:hover {
-    color: var(--Light-grayish-blue);
-} */
-
-.section {
-    background: white;
-    border-bottom: 1px solid var(--Light-grayish-blue);
-}
-
-label {
-    cursor: pointer;
-    display: block;
-    padding: 15px 0;
-    margin: 0;
-    position: relative;
-}
-
-
-
-label::after {
-    content: url(/images/icon-arrow-down.svg);
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.accordion__content {
-    visibility: hidden;
-    overflow: hidden;
-    padding: 0 20px;
-    max-height: 0;
-    transition: all .5s ease;
-}
-
-.accordion__content *{
-    opacity: 0;
-    transition: all .5s ease;
-}
-
-input {
+.box{
     display: none;
 }
 
-input:checked + label + .accordion__content {
-    padding: 15px 0;
-    max-height: 100vh;
-    visibility: visible;
-    opacity: 1;
+.second {
+    outline: 1px solid red;
+    
 }
 
-input:checked + label + .accordion__content *{
-    opacity: 1;
+.second h1 {
+    text-align: center;
 }
 
-input:checked + label::after {
-    transform: rotate(180deg);
-   
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
-input:checked + label {
-     color: var(--Dark-grayish-blue);
+
+@media screen and (min-width: 780px) {
+    main{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* overflow: hidden; */
+    }
+
+    .image-container::before {
+        position: relative;
+        content: url(/images/illustration-woman-online-desktop.svg);
+        top: 60px;
+        left: -120px;
+        z-index: 1;
+    }
+
+    .box {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: 180px;
+        left: -140px;
+        
+    }
+
+    .image-container::after {
+        position: absolute;
+        content: url(/images/bg-pattern-desktop.svg);
+        height: 50px;
+        left: -1130px;
+        top: -310px;
+    }
 }
 
-/* input:hover + label {
-    color: var(--soft-red);
-} */
-
-.accordion__label:hover {
-    color: var(--soft-red);
-}
