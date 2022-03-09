@@ -42,13 +42,6 @@ body {
     background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
     background-repeat: no-repeat;
     background-size: cover;
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
-    overflow-y: scroll; 
-}
-
-body::-webkit-scrollbar { 
-    display: none; 
 }
 
 
@@ -56,7 +49,7 @@ main {
     width: 90%;
     max-width: 930px;
     height: 80%;
-    max-height: 540px;
+    max-height: 565px;
     background-color: white;
     display: grid;
     place-items: center;
@@ -72,7 +65,7 @@ main {
 }
 
 .image-container {
-    height: 25%;
+    height: 20%;
 }
 
 .image-container .mobile-image {
@@ -80,7 +73,6 @@ main {
     place-items: center;
     width: 250px;
     margin: 0 auto;
-    /* margin-top: -130px ; */
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -99,10 +91,6 @@ main {
     right: 0;
     top: -140px;
 }
-
- /* .image-container::content {
-     content: url(/images/illustration-woman-online-mobile.svg);
- } */
 
  .image-container::after {
     content: url(/images/bg-pattern-mobile.svg);
@@ -137,9 +125,70 @@ main {
     
 }
 
-.second h1 {
+h1 {
     text-align: center;
+    font-size: 2.5rem;
 }
+
+.accordion-item {
+     border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row; */
+    /* padding: 20px 0; */
+    outline: none;
+    background: none;
+    border: none;
+    width: 100%;
+   
+    text-align: left;
+    
+}
+
+button.active span {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;   
+}
+
+button.active img {
+    transition: all .3s ease-in-out;
+    transform: rotate(180deg);
+}
+
+
+
+span {
+    padding: 20px 0;
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    text-align: left;
+}
+
+span:hover {
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.accordion-elements {
+    padding: 15px 0 0px;
+}
+
+p {
+    padding-bottom: 22px;
+    width: 80%;
+    color: var(--Dark-grayish-blue);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
 
 footer {
     position: absolute;
@@ -149,6 +198,7 @@ footer {
 
 @media screen and (min-width: 780px) {
     main{
+        margin-top: 0px;
         position: relative;
         overflow: hidden;
     }
@@ -156,24 +206,25 @@ footer {
     .container {
         display: grid;
         grid-template-columns: 50% 50%;
-        /* overflow: hidden; */
+        place-items: center;
     }
 
     .image-container::before {
         position: relative;
         content: url(/images/illustration-woman-online-desktop.svg);
-        top: 60px;
-        left: -120px;
+        /* top: 60px; */
+        left: -100px;
         z-index: 1;
     }
 
     .box {
         display: block;
-        position: absolute;
         z-index: 3;
-        top: 180px;
-        left: -140px;
-        
+        position: fixed;
+        margin-right: inherit;
+        margin-left: inherit;
+        margin-top: -355px;
+        margin-left: -150px;
     }
 
     .image-container::after {
@@ -183,5 +234,17 @@ footer {
         left: -1130px;
         top: -310px;
     }
+
+    h1 {
+        font-size: 3rem;
+        padding: 30px 0;
+        text-align: left;
+    }
+
+    .accordion-elements {
+        padding-top: 0px;
+    }
+
+    
 }
 
